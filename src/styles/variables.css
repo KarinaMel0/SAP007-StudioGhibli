@@ -1,2 +1,4 @@
-/* --breakpoint-tablet: 767px;
-$breakpoint-mobile: 480px; */
+:root{
+  --cor-principal-1: #034040;
+  --cor-principal-2: #B8D8C0;
+}

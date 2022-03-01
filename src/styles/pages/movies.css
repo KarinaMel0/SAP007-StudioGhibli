@@ -1,34 +1,49 @@
 @import "../reset.css";
 @import "../components/header.css";
-@import "../components/footer.css";
+
+
 
 .mainContainer {
   min-height: 75vh;
-  background-color: #efefef;
   width: 100%;
-  padding: 30px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 
 .inputContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 6.5rem;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.inputContainer img{
+  width:10%;
 }
 
 .inputs {
   border: none;
-  background: #ffffff;
   border-radius: 10px;
-  height: 38px;
+  height: 2.2rem;
   padding-left: 15px;
+  width: 15vw;
+  font-size: 1.4rem;
+
 }
+
 
 .cardsContainer {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .cardsContainer .cards:nth-child(n) {
@@ -37,35 +52,33 @@
 
 .cards {
   position: relative;
-  background-color: #caebf2;
-
+  gap: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  padding: 16px;
+
 }
 
 .poster {
-  height: 150px;
-  /* width: 80px; */
+  height: 50vh;
+
   border-radius: 10px;
 }
 .divTitle {
-  position: absolute;
+
   display: flex;
   align-items: center;
   justify-content: center;
   height: 3.125rem;
   width: 100%;
-  bottom: 0;
-  background: rgba(196, 196, 196, 0.47);
-  border-radius: 0px 0px 13.8889px 13.8889px;
 }
+
+
 .titleWithinCard {
-  position: absolute;
-  font-size: 100%;
-  font-family: Montserrat;
+  position: relative;
+  font-size: 1.7rem;
+  font-family: 'Amatic SC', cursive;;
   text-align: center;
 }
 
@@ -78,10 +91,26 @@
   .mainContainer {
     min-height: 82vh;
   }
+  .inputs {
+    border: none;
+    border-radius: 10px;
+    height: 2.2rem;
+    padding-left: 15px;
+    width: 18vw;
+    font-size: 1.4rem;
+  }
 }
 @media (max-width: 480px) {
   .cardsContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .inputs {
+    border: none;
+    border-radius: 10px;
+    height: 2.2rem;
+    padding-left: 15px;
+    width: 30vw;
+    font-size: 1.4rem;
   }
 }

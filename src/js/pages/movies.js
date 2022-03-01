@@ -1,16 +1,18 @@
 import dataGhibli from "../../data/ghibli/ghibli.js";
 import { sortArray } from "../data.js";
-import { menu } from "../components/header.js";
 
-console.log(dataGhibli);
 const cardsContainer = document.createElement("section");
-menu();
 
+sortArray.search("Castle");
 export function renderScreen(data) {
   document.getElementById("mainContainer").appendChild(cardsContainer);
   cardsContainer.classList.add("cardsContainer");
   cardsContainer.innerHTML = "";
-  data.films.map((items) => {
+  console.log(data.films);
+  if (data.films != undefined) {
+    data = data.films;
+  }
+  data.map((items) => {
     const card = document.createElement("ul");
     const title = document.createElement("h1");
     const poster = document.createElement("img");
@@ -31,6 +33,11 @@ export function renderScreen(data) {
   });
 }
 renderScreen(dataGhibli);
+document.querySelector("#search").addEventListener("keyup", (e) => {
+  console.log(e.target.value);
+  renderScreen(sortArray.search(e.target.value));
+});
+
 document.getElementById("inputSelect").addEventListener("change", (e) => {
-  sortArray.filterArray(e.target.value);
+  renderScreen(sortArray.filterArray(e.target.value));
 });

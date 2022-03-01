@@ -1,6 +1,4 @@
 import dataGhibli from "../data/ghibli/ghibli.js";
-import { renderScreen } from "../js/pages/movies.js";
-console.log(dataGhibli);
 
 export const sortArray = {
   filterArray(inputValue) {
@@ -34,7 +32,7 @@ export const sortArray = {
       }
     });
 
-    renderScreen(dataGhibli);
+    return dataGhibli;
   },
   ordenar(a, b) {
     if (a < b) {
@@ -53,5 +51,13 @@ export const sortArray = {
       return -1;
     }
     return 0;
+  },
+
+  search(Data) {
+    const Filtro = dataGhibli.films.filter((value) => {
+      return value.title.toLowerCase().indexOf(Data.toLowerCase()) > -1;
+    });
+
+    return Filtro;
   },
 };
