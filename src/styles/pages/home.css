@@ -1,3 +1,36 @@
 @import "../reset.css";
 @import "../components/header.css";
+@import "../components/Carrossel.css";
 
+
+.carrossel{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+
+}
+.slides{
+  width: 28rem;
+  height: 15.5rem;
+}
+
+.text{
+  padding-top: 50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+.text h1,p{
+  font-family: Mali;
+}
+.text h1{
+  font-size: 2.1rem;
+
+}
+.text p{
+  font-size: 1.1rem;
+}

@@ -3,15 +3,17 @@ import { sortArray } from "../data.js";
 
 const cardsContainer = document.createElement("section");
 
+
 sortArray.search("Castle");
 export function renderScreen(data) {
   document.getElementById("mainContainer").appendChild(cardsContainer);
   cardsContainer.classList.add("cardsContainer");
   cardsContainer.innerHTML = "";
-  console.log(data.films);
+
   if (data.films != undefined) {
     data = data.films;
   }
+
   data.map((items) => {
     const card = document.createElement("ul");
     const title = document.createElement("h1");
@@ -34,7 +36,7 @@ export function renderScreen(data) {
 }
 renderScreen(dataGhibli);
 document.querySelector("#search").addEventListener("keyup", (e) => {
-  console.log(e.target.value);
+
   renderScreen(sortArray.search(e.target.value));
 });
 

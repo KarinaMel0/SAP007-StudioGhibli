@@ -81,6 +81,16 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  transition: 0.5s;
+
+}
+.listItem:hover{
+  background: rgba(207, 223, 210, 0.47);
+  width:164px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {

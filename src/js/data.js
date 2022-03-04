@@ -60,4 +60,5 @@ export const sortArray = {
 
     return Filtro;
   },
+
 };
