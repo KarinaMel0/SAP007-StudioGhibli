@@ -2,35 +2,132 @@
 @import "../components/header.css";
 @import "../components/Carrossel.css";
 
-
-.carrossel{
-  display:flex;
+main {
+  margin-left: 3.8rem;
+  display: flex;
+  gap: 6rem;
+  flex-direction: column;
+}
+.logoHome {
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 50px;
-
 }
-.slides{
-  width: 28rem;
-  height: 15.5rem;
+.logoHome img {
+  width: 40%;
+}
+.logoHome h1 {
+  font-size: 3rem;
+  font-family: Mali;
+  font-style: normal;
+  font-weight: 900;
+  color: var(--cor-principal-1);
+}
+.carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+  row-gap: 1.4rem;
+}
+.slides {
+  width: 50rem;
+  height: 27rem;
 }
 
-.text{
-  padding-top: 50px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.text {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
   padding: 10px;
+  row-gap: 2.1rem;
+  height: 50.56rem;
 }
-.text h1,p{
+.text h2,
+p {
   font-family: Mali;
 }
-.text h1{
+.text h2 {
   font-size: 2.1rem;
-
 }
-.text p{
+.text p {
   font-size: 1.1rem;
+  line-height: 1.6rem;
+  width: 41.57rem;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+}
+
+.backgroundText {
+  position: absolute;
+  width: 41.57rem;
+  height: 50.56rem;
+
+  background: rgba(1, 82, 73, 0.64);
+  transform: rotate(10.93deg);
+  z-index: -1;
+}
+.backgroundText.backgroundText2 {
+  transform: rotate(-10.93deg);
+}
+h2 {
+}
+
+@media (max-width: 425px) {
+  main {
+    margin-left: 3.8rem;
+    display: flex;
+    gap: 10rem;
+    flex-direction: column;
+  }
+  .logoHome img {
+    width: 20%;
+  }
+  .logoHome h1 {
+    font-size: 2rem;
+
+    font-family: Mali;
+    font-style: normal;
+    font-weight: 900;
+    color: var(--cor-principal-1);
+  }
+  .slides {
+    width: 20rem;
+    height: 12rem;
+  }
+
+  .text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    row-gap: 2.6rem;
+    height: 80.56rem;
+  }
+  .text p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    width: 18.57rem;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+  }
+
+  .backgroundText {
+    position: absolute;
+    width: 41.57rem;
+    height: 115%;
+    background: rgba(1, 82, 73, 0.64);
+    transform: rotate(10.93deg);
+    z-index: -1;
+  }
 }
