@@ -32,7 +32,7 @@
                 src="./assets/fluent_movies-and-tv-16-filled.svg"
                 alt="IconMovies"
               />
-              <a href="movies.html">Movies</a>
+              <a href="./movies.html">Movies</a>
             </li>
             <li class="listItem">
               <img src="./assets/ph_mask-happy-fill.svg" alt="IconMovies" />
@@ -58,6 +58,20 @@
       </header>
 
       <main class="mainContainer" id="mainContainer">
+
+
+     <div class="modalContainer">
+       <div class="modal">
+
+          <button class="close">close Modal</button>
+       </div>
+     </div>
+
+
+
+
+
+
         <div class="inputContainer">
           <input
             type="search"
@@ -66,10 +80,7 @@
             placeholder="Search"
           />
 
-          <img
-            src="./assets/2d92accdc77f74ad3949c6edb5b49686.gif"
-            alt="gif-totoro"
-          />
+
           <select
             name="inputSelect"
             id="inputSelect"
@@ -83,9 +94,33 @@
             <option value="Newest">Newest</option>
             <option value="Oldest">Oldest</option>
           </select>
+
+          <select
+            name="inputSelect"
+            id="directors"
+            class="inputs"
+            title="inputSelect"
+          >
+            <option value="">Director</option>
+
+          </select>
+
+          <select
+          name="inputSelect"
+          id="Producer"
+          class="inputs"
+          title="inputSelect"
+        >
+          <option value="">Producer</option>
+
+        </select>
+
         </div>
+
       </main>
     </div>
+
+
     <script src="./js/pages/movies.js" type="module"></script>
   </body>
 </html>
