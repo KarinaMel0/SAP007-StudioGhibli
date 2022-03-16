@@ -1,15 +1,18 @@
 import dataGhibli from "../../data/ghibli/ghibli.js"
 import {sortArray} from "../../js/data.js"
 
+const modalContainer = document.querySelector(".modalContainer");
 const cardsContainer = document.createElement("section");
 let personagens = sortArray.filterSpecies("")
 
-//O paramentro da funcao nada mais e do que so um exemplo do dado ou seja, oque vc vai tratar, o js realmente vai fazer funcionar quando passar dados de verdade pra ele, linha 35.
+// Array global de personagens, esta sendo utilizado no InputFilmes e no InputAZ, serve para conseguir ordernar de A-Z e Z-A para
+
+
  function renderScreen(data) {
   document.getElementById("mainContainer").appendChild(cardsContainer);
   cardsContainer.classList.add("cardsContainer");
   cardsContainer.innerHTML = "";
-  console.log(data)
+
   if (data == undefined) {
     return
   }
@@ -43,18 +46,19 @@ let personagens = sortArray.filterSpecies("")
           renderModal(i); }})});});
   })}
 
-renderScreen(sortArray.searchCharacters(""))
 
 document.getElementById("inputAZ").addEventListener("change", (e) => {
-  renderScreen(sortArray.filterCharactersAZ(e.target.value,personagens));
+    renderScreen(sortArray.filterCharactersAZ(e.target.value,personagens));
 
 });
 
 document.querySelector("#search").addEventListener("keyup", (e) => {
-  document.querySelector("#calculoCharaters").remove()
-  InsertCalc(sortArray.searchCharacters(e.target.value).length)
+  document.querySelector("#calculoCharaters").remove()   // remove o calculo da tela, sem isso fica se repetindo sem parar.
+
   renderScreen(sortArray.searchCharacters(e.target.value));
   personagens = sortArray.searchCharacters(e.target.value)
+
+  document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(sortArray.searchCharacters(e.target.value).length).toFixed(2)}% of characters  </p>`)
 });
 
 document.getElementById("inputFilmes").addEventListener("change", (e) => {
@@ -62,37 +66,40 @@ document.getElementById("inputFilmes").addEventListener("change", (e) => {
   const calculo =  100 * calculoFilms.length / 171
   renderScreen(calculoFilms);
   document.querySelector("#calculoCharaters").remove()
+
   personagens = calculoFilms
+
+
   if(calculoFilms.length != 171){
     document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters"> ${e.target.value} has ${calculo.toFixed(2)}% characters </p>`)
   } else{
-    document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${calculo.toFixed(2)}% characters in total </p>`)
+    document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(personagens.length).toFixed(2)}% of characters  </p>`)
   }
 
 });
 
-document.getElementById("inputSelect").addEventListener("change", (e) => {
+document.getElementById("InputSpecies").addEventListener("change", (e) => {
 
   const calculoFilms = sortArray.filterSpecies(e.target.value)
   renderScreen(calculoFilms);
   document.querySelector("#calculoCharaters").remove()
   personagens = calculoFilms
-  InsertCalc(calculoFilms.length)
 
+  document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(calculoFilms.length).toFixed(2)}% of characters  </p>`)
 });
 
-const modalContainer = document.querySelector(".modalContainer");
+
 
 function renderModal(infoFilme) {
 
   const modal = document.querySelector(".modal");
 
-  const filmes =  dataGhibli.films.filter(itematual => {
+  dataGhibli.films.filter(itematual => {
     return itematual.people.filter((personagemAtual) => {
       return personagemAtual.id == infoFilme.id
     })
   })
-  console.log(filmes)
+
   modal.innerHTML = "";
 
   modal.innerHTML = `
@@ -104,7 +111,6 @@ function renderModal(infoFilme) {
           <h3> Specie: ${infoFilme.specie}</h3>
           <h3>Hair Color: ${infoFilme.hair_color}</h3>
           <h3>Eye Color: ${infoFilme.eye_color}</h3>
-
   `;
   const buttonCloseModal = document.querySelector(".closeModal");
   buttonCloseModal.addEventListener("click", () => {
@@ -118,29 +124,17 @@ function renderModal(infoFilme) {
 
 
 
+ document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(personagens.length).toFixed(2)}% of characters  </p>`)
 
 
-function InsertCalc(calculoFilms){
-
-  let calculo =  100 * calculoFilms / 171
-
-  if(calculo.length == 171){
-    document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">This species has .${calculo.toFixed(2)}% of characters </p>`)
-  } else{
-    document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${calculo.toFixed(2)}% of characters in total </p>`)
-  }
 
 
-}
-
-
-InsertCalc(sortArray.filterSpecies("").length)
-
+renderScreen(sortArray.searchCharacters(""))
 
 sortArray.filterFilmsDropDown().forEach(function(newFilter){
   document.querySelector('#inputFilmes').insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
 })
 
 sortArray.filterSpeciesDropDown().forEach(function(newFilter){
-  document.querySelector('#inputSelect').insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
+  document.querySelector('#InputSpecies').insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
 })

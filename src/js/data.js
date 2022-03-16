@@ -214,8 +214,14 @@ export const sortArray = {
 
   return newArray[0].people
 
-}
+},
 
+ calc(calculoFilms){
+
+  let calculo =  100 * calculoFilms / 171
+
+  return calculo
+}
 }
 
 
