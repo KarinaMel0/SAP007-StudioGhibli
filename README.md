@@ -1,14 +1,14 @@
 # Ghibli Wiki
 
-## Projeto #2 Data Lovers - Desenvolvido no Bootcamp Laboratória
+## Projeto Data Lovers - Desenvolvido no Bootcamp Laboratória
 
 
 
 ## Sumário
 - [Definição do Produto](#definição-do-Produto-)
-- [Usuário](#usuário-)
-- [Protótipo](#protótipo-)
-- [Como Utilizar?](#Como-Utilizar-)
+- [Usuário](#usuario-)
+- [Protótipo](#prototipo-)
+- [Como Utilizar?](#como-utilizar-)
 - [Tecnologias](#tecnologias-)
 - [Resultado Final](#resultados-final-)
 - [Desenvolvedora](#desenvolvedora-)
