@@ -40,9 +40,9 @@ Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli
 
 ### História de Usuário &#9998;
 
-<img src="https://cdn.discordapp.com/attachments/725539486951538750/954420493581164594/Frame_37_2.png" alt="Historia de usuario 1">
-<img src="https://cdn.discordapp.com/attachments/725539486951538750/954420828789936168/Frame_38_3.png" alt="Historia de usuario 2">
-<img src="https://cdn.discordapp.com/attachments/725539486951538750/954420963523559484/Frame_39_2.png" alt="Historia de usuario 3">
+<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954420493581164594/Frame_37_2.png" alt="Historia de usuario 1">
+<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954420828789936168/Frame_38_3.png" alt="Historia de usuario 2">
+<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954420963523559484/Frame_39_2.png" alt="Historia de usuario 3">
 
 ---
 ## Protótipo
@@ -65,7 +65,9 @@ Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli
 ##### Tablet(767px)
 
 <img src="https://cdn.discordapp.com/attachments/725539486951538750/954427216253575168/Screenshot_43.png" alt="Tablet">
+
 ##### Desktop
+
 <img width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/954427567950143508/Screenshot_44.png" alt="Desktop"> <img width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/954427568226971708/Screenshot_45.png" alt="Desktop">
 
 ### Paleta de cores usadas
