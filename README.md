@@ -2,13 +2,13 @@
 
 ## Projeto #2 Data Lovers - Desenvolvido no Bootcamp Laboratória
 
-## Teste Aqui: <a href="https://karinamel0.github.io/SAP007-card-validation/"> <img width=200px src="https://cdn.discordapp.com/attachments/725539486951538750/937909816523898990/FaceLab.png" > </a>
+
 
 ## Sumário
-- [Definição do Produto](#usuário-)
+- [Definição do Produto](#definição-do-Produto-)
 - [Usuário](#usuário-)
-- [Protótipo do projeto](#protótipo-do-projeto-)
-- [Funcionalidades](#funcionalidades-)
+- [Protótipo](#protótipo-)
+- [Como Utilizar?](#Como-Utilizar-)
 - [Tecnologias](#tecnologias-)
 - [Resultado Final](#resultados-final-)
 - [Desenvolvedora](#desenvolvedora-)
@@ -17,80 +17,124 @@
 
 ## Definição do Produto
 
-O <a href="">Ghibli Wiki</a> foi criado
+O <a href="">Ghibli Wiki</a> Foi elaborado com a finalidade de facilitar o dia a dia dos fãs e orienta-los com informações das suas obras preferidas do Studio Ghibli.
+
+O Design do site foi pensando para trazer uma verdadeira imersão para o usuário, com a página Home sendo o portal de entrada, contendo um pouco do Studio e um Slide Show com alguns dos filmes mais famosos do Studio aqui no Brasil.
+
+No site o usuário tem uma página de filmes com informações como, data de lançamento, diretor, produtor e Nota, fazendo com que o site reúna uma verdadeira Ghibli Wiki com variedade de filmes e seus detalhes.
+
+Temos também a página de personagens, para aqueles que querem saber um pouco mais sobre cada personagem e suas particularidades, podendo ser usado para pesquisas ou apenas para matar a curiosidade apos ver um filme do Studio Ghibli. Nesta página é possível pesquisar por nome e ordenar por filme.
+
+O site conta com responsividade, sendo possivel acessar do *Desktop*, *Mobile(425px)* ou *Tablet(767px)*
+
+Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli.
+
 
 ---
 
-## Usuário &#x1F64B;
+## Usuário
 
-Meu Usuário escolhido são pessoas que estão passando por uma queda de auto-estima e consequentemente amor-próprio. O FaceLab traz a vontade de cuidar de si novamente, de dentro para fora.
-<div align="center">
-<img align="center" width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/937909125604573184/Instagram_story_-_1.png">
-</div>
+  ### Quem é o Usuário?
 
-#### Amor-Próprio &#128149;
+  O usuário alvo são fãs ou apenas simpatizantes do Studio Ghibli que querem saber mais detalhes de suas obras ou personagens.
 
-Escolhi este tema, pois este afeta muitas pessoas, e as vezes não damos importância para tal área em nossas vidas.
+### História de Usuário &#9998;
 
-> "Praticar amor-próprio é entender que você é a pessoa mais importante da sua vida e assumir a responsabilidade pelo que acontece nela, sem culpar os outros e adquirindo cada vez mais autonomia.
-> É algo que permite entender que a nossa felicidade está nas nossas próprias mãos e que, sendo seu bem mais precioso, não pode ser submetida ao controle dos outros."
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954420493581164594/Frame_37_2.png" alt="Historia de usuario 1">
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954420828789936168/Frame_38_3.png" alt="Historia de usuario 2">
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954420963523559484/Frame_39_2.png" alt="Historia de usuario 3">
 
-#### -[Thaiana Brotto-Psicóloga](https://www.psicologoeterapia.com.br/blog/amor-proprio/)
+---
+## Protótipo
 
-## Protótipo do projeto &#128187;
+##### Protótipo de baixa fidelidade
+##### Home
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954408023781146724/Screenshot_39.png" alt="Protótipo Home">
 
-Fiz o protótipo no Figma, me aventurando pelos plugins e aprendendo mais sobre essa nova ferramenta de design gráfico focado na criação de interfaces.
-Meu maior desafio foi fazer a o projeto ficar o mais parecido possível com oque estava no Figma, e claro, tentar trazer a identidade da marca.
+##### Movies
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954408001203220490/Screenshot_40.png" alt="Protótipo Movies">
 
-### Figma
+##### Characters
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954409412892692481/Screenshot_41.png" alt="protótipo Characters">
 
-<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/937908851678793728/Screenshot_2.png">
+#### Alta Fidelidade
+
+##### Mobile(425px)
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954426294135832687/Screenshot_42.png" alt="Mobile">
+
+##### Tablet(767px)
+
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/954427216253575168/Screenshot_43.png" alt="Tablet">
+##### Desktop
+<img width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/954427567950143508/Screenshot_44.png" alt="Desktop"> <img width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/954427568226971708/Screenshot_45.png" alt="Desktop">
 
 ### Paleta de cores usadas
 
-<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/937907014674296883/Screenshot_310.png" >
+<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954428170445144094/Screenshot_46.png" >
 
 ---
 
-## Como funciona? &#128179;
+## Como Utilizar?
 
-Primeiro você preenche corretamente todos os campos com suas informações, e os dados do seu cartão passa por toda parte logica no `Validator.isValid`, eles são jogados para o **index.js**, onde fica responsável por dividir os números em grupo de 4 e mostrar para o usuário, se o cartão é valido, se não, pede um número de cartão valido. Já o `Validator.Maskify` fica responsável por transformas os numeros em #(hashtags).
+Na pagina inicial temos algumas informacoes sobre o studio.
 
-Coloquei apenas 3 categorias de bandeiras diferentes, tente usar estes números de cartão:
-| Bandeiras | Números validos |
-| ------ | ------ |
-| Visa | 4012888888881881 |
-| MasterCard | 5555666677778884 |
-| Amex | 343311819009710 |
+Com o Click(Mobile ou Tablet) ou apenas passando o mouse por cima do menu lateral voce pode ter acesso ao restante do site e minhas redes de contanto.
+
+##### Pagina Movies
+
+Ao acessar pagina Movies temos várias formas de filtrar e pesquisar.
+
+Barra de pesquisa: Podemos pesquisar por nome do Filme.
+Filtro A-Z: Podemos ordenar os filmes por ordem alfabética, por data e por nota.
+Filtro Director: Podemos ver todos os filmes do Diretor escolhido.
+Filtro Producer: Podemos ver todos os filmes do Producer escolhido.
+
+Para saber mais detalhes sobre o filme, basta apenas selecionar a capa ou nome de qual desejar.
+
+##### Pagina Characters
+Ao acessar pagina Characters temos várias formas de filtrar e pesquisar.
+
+Barra de pesquisa: Podemos pesquisar por nome do personagem.
+Filtro de A-Z: Podemos ordenar os filmes por ordem alfabética.
+Filtro de Species: Podemos pesquisar por Espécies existentes no universo do Studio Ghibli.
+Filtro Movies: Podemos pesquisar por Filme e encontrar todos os personagens.
+
+Para saber mais detalhes sobre o Personagem, basta apenas selecionar a foto de qual desejar.
+
+
 
 ---
 
 ## Tecnologias &#128640;
 
-| Tec's      |
-| ---------- |
-| Figma      |
-| Git        |
-| JavaScript |
-| CSS        |
-| HTML       |
-| Node.Js    |
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Node.js](https://nodejs.org/)
+- [Jest](https://jestjs.io/)
+- [Figma](https://www.figma.com)
+
+
 
 ---
-
 ## Resultado Final &#9989;
+##### Home
+<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/954448271517032548/ezgif-4-4fbbaef44e_1.gif">
 
-<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/937907014347161631/Screenshot_301.png">
-<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/937907651105407006/Screenshot_312.png">
-<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/937913259334438932/Facelabgif.gif">
+##### Movies
+<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/954449425202303026/ezgif-4-71d4793303.gif">
+
+##### Characters
+<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/954451424949977119/ezgif-4-73bfd51191.gif">
 
 ---
 
 ## Sobre a desenvolvedora &#127803;
-
+- Karina Mel
+>
 <a href="https://www.linkedin.com/in/karina-mel-611649223/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 <br>
-E-mail: Karinamelarantessilva@gmail.com
+
 
 ---
 
@@ -105,77 +149,7 @@ E-mail: Karinamelarantessilva@gmail.com
 </div>
 
 
-### Conteúdo de referência
-
-#### UX Design (Experiência do usuário)
-
-- Pesquisa com usuarios / entrevistas
-- Princípios de design/UI
-
-#### Desenvolvimento Front-End
-
-- Unidade de testes do curso de JavaScript do LMS.
-- Unidade de arrays do curso de JavaScript do LMS.
-- Unidade de objetos do curso de JavaScript do LMS.
-- Unidade de funções do curso de JavaScript do LMS.
-- Unidade de DOM do curso de JavaScript do LMS.
-- [Array no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Array.sort no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-- [Array.map no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [Array.filter no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro)
-- [Array.reduce no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-- [Array.forEach no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-- [Object.keys no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
-- [Object.entries no
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)
-- [Fetch API no MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-- [json.org](https://json.org/json-pt.html)
-- [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-- [Tipos de Dados](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures)
-- [Modulos:
-  Export](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/export)
-- [Modulos:
-  Import](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/import)
-
-#### Ferramentas
-
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-- [GitHub Pages](https://pages.github.com/)
-- [Node.js](https://nodejs.org/)
-- [Jest](https://jestjs.io/)
-
-#### Organização do trabalho
-
-- [Histórias de Usuário](https://www.youtube.com/watch?v=sEtiCJfXTE8)
-- [Definição de pronto](https://www.youtube.com/watch?v=Kfss63Q42F8)
-- [Critérios de
-  aceitação](https://medium.com/@karladiasn/user-stories-e-crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-317c48403fcd)
-- [Guia para Data
-  Lovers](https://docs.google.com/presentation/d/1bOq8ns5wsvXdksdqYL3aQoxzFQsXTVlyvlV-yxI2oBM/present?token=AC4w5VhHBbEEA9u2w8bm3Ey1Cse349frbg%3A1567540902700&includes_info_params=1&eisi=CM_ytPW4teQCFQrJgQodeTcEZg#slide=id.g5282e1a53f_1_106)
 
 ---
 
-## 9. Checklist
 
-- [ ] Usar VanillaJS.
-- [ ] Passa pelo linter (`npm run pretest`)
-- [ ] Passa pelos testes (`npm test`)
-- [ ] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e
-      branches.
-- [ ] Inclui uma _definição de produto_ clara e informativa no `README.md`.
-- [ ] Inclui histórias de usuário no `README.md`.
-- [ ] Inclui rascunho da solução (protótipo de baixa fidelidade) no `README.md`.
-- [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no
-      `README.md`.
-- [ ] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
-- [ ] UI: Permite ordenar dados por um ou mais campos (asc e desc).
-- [ ] UI: Permite filtrar dados com base em uma condição.
-- [ ] UI: É _responsivo_.
