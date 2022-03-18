@@ -121,13 +121,13 @@ Para saber mais detalhes sobre o Personagem, basta apenas selecionar a foto de q
 ---
 ## Resultado Final &#9989;
 ##### Home
-<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/954448271517032548/ezgif-4-4fbbaef44e_1.gif">
+<img width=600px alt="Resultado Final Home" src="https://cdn.discordapp.com/attachments/858579792914546708/954448271517032548/ezgif-4-4fbbaef44e_1.gif">
 
 ##### Movies
-<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/954449425202303026/ezgif-4-71d4793303.gif">
+<img width=600px alt="Resultado Final Movies" src="https://cdn.discordapp.com/attachments/858579792914546708/954449425202303026/ezgif-4-71d4793303.gif">
 
 ##### Characters
-<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/954451424949977119/ezgif-4-73bfd51191.gif">
+<img width=600px alt="Resultado Final Characters" src="https://cdn.discordapp.com/attachments/858579792914546708/954451424949977119/ezgif-4-73bfd51191.gif">
 
 ---
 
