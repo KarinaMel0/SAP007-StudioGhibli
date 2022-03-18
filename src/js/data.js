@@ -3,6 +3,7 @@ import dataGhibli from "../data/ghibli/ghibli.js";
 
 
 export const sortArray = {
+
   filterArray(inputValue) {
     let selectValueDropDown = inputValue;
 

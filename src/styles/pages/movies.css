@@ -165,11 +165,8 @@ position:relative;
 }
 .modal .poster{
   flex-shrink: 0;
-  width: 10rem;
+  width: 11rem;
   height: 15rem;
-}
-.modal .poster {
-  height: 30vh;
   border-radius: 10px;
   transform: scale(1); /* 100% */
   transition: 1s;

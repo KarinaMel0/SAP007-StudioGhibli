@@ -4,7 +4,6 @@ import {sortArray} from "../../js/data.js"
 const modalContainer = document.querySelector(".modalContainer");
 const cardsContainer = document.createElement("section");
 let personagens = sortArray.filterSpecies("")
-
 // Array global de personagens, esta sendo utilizado no InputFilmes e no InputAZ, serve para conseguir ordernar de A-Z e Z-A para
 
 

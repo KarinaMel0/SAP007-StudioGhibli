@@ -62,7 +62,7 @@ describe("filter Species", () => {
 
 });
 
-describe("InsertCalc", () => {
+describe("Calc", () => {
 
   it("O retorno precisa ser `1.75`", () => {
     expect(sortArray.calc(sortArray.filterSpecies("Witch").length).toFixed(2)).toBe("1.75");
