@@ -21,7 +21,7 @@
 
 ## Definição do Produto :pencil2:
 
-O <a href="">Ghibli Wiki</a> Foi elaborado com a finalidade de facilitar o dia a dia dos fãs e orienta-los com informações das suas obras preferidas do Studio Ghibli.
+O <a href="https://karinamel0.github.io/SAP007-data-lovers/">Ghibli Wiki</a> Foi elaborado com a finalidade de facilitar o dia a dia dos fãs e orienta-los com informações das suas obras preferidas do Studio Ghibli.
 
 O Design do site foi pensando para trazer uma verdadeira imersão para o usuário, com a página Home sendo o portal de entrada, contendo um pouco do Studio e um Slide Show com alguns dos filmes mais famosos do Studio aqui no Brasil.
 
