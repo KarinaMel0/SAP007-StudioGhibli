@@ -45,7 +45,7 @@ Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli
 ### História de Usuário &#9998;
 
 <img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/955509464193171546/Frame_37_3.png" alt="Historia de usuario 1">
-<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/955509695077048370/Frame_38.png" alt="Historia de usuario 2">
+<img width=600px src="https://cdn.discordapp.com/attachments/858579792914546708/955545750551547925/Frame_38_1.png" alt="Historia de usuario 2">
 <img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/955509695316131860/Frame_39.png" alt="Historia de usuario 3">
 
 ---
