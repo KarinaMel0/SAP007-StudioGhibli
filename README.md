@@ -1,13 +1,17 @@
-# Ghibli Wiki
+# Projeto Data Lovers - Desenvolvido no Bootcamp Laboratória
+## Studio Ghibli 
 
-## Projeto Data Lovers - Desenvolvido no Bootcamp Laboratória
+
+<img src="https://cdn.discordapp.com/attachments/725539486951538750/955512798241251348/Desktop_-_Movies_page_1.png">
+
+
 
 
 
 ## Sumário
 - [Definição do Produto](#definição-do-Produto-)
-- [Usuário](#usuario-)
-- [Protótipo](#prototipo-)
+- [Usuário](#usuário-)
+- [Protótipo](#protótipo-)
 - [Como Utilizar?](#como-utilizar-)
 - [Tecnologias](#tecnologias-)
 - [Resultado Final](#resultados-final-)
@@ -15,7 +19,7 @@
 
 ---
 
-## Definição do Produto
+## Definição do Produto :pencil2:
 
 O <a href="">Ghibli Wiki</a> Foi elaborado com a finalidade de facilitar o dia a dia dos fãs e orienta-los com informações das suas obras preferidas do Studio Ghibli.
 
@@ -34,18 +38,18 @@ Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli
 
 ## Usuário
 
-  ### Quem é o Usuário?
+  ### Quem é o Usuário? :scroll:
 
   O usuário alvo são fãs ou apenas simpatizantes do Studio Ghibli que querem saber mais detalhes de suas obras ou personagens.
 
 ### História de Usuário &#9998;
 
-<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954420493581164594/Frame_37_2.png" alt="Historia de usuario 1">
-<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954420828789936168/Frame_38_3.png" alt="Historia de usuario 2">
-<img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954420963523559484/Frame_39_2.png" alt="Historia de usuario 3">
+<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/955509464193171546/Frame_37_3.png" alt="Historia de usuario 1">
+<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/955509695077048370/Frame_38.png" alt="Historia de usuario 2">
+<img width=600px src="https://cdn.discordapp.com/attachments/725539486951538750/955509695316131860/Frame_39.png" alt="Historia de usuario 3">
 
 ---
-## Protótipo
+## Protótipo 
 
 ##### Protótipo de baixa fidelidade
 ##### Home
@@ -70,13 +74,13 @@ Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli
 
 <img width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/954427567950143508/Screenshot_44.png" alt="Desktop"> <img width=300px src="https://cdn.discordapp.com/attachments/725539486951538750/954427568226971708/Screenshot_45.png" alt="Desktop">
 
-### Paleta de cores usadas
+### Paleta de cores utilizada
 
 <img width=500px src="https://cdn.discordapp.com/attachments/725539486951538750/954428170445144094/Screenshot_46.png" >
 
 ---
 
-## Como Utilizar?
+## Como Utilizar? :gear:
 
 Na pagina inicial temos algumas informacoes sobre o studio.
 
@@ -87,8 +91,11 @@ Com o Click(Mobile ou Tablet) ou apenas passando o mouse por cima do menu latera
 Ao acessar pagina Movies temos várias formas de filtrar e pesquisar.
 
 Barra de pesquisa: Podemos pesquisar por nome do Filme.
+
 Filtro A-Z: Podemos ordenar os filmes por ordem alfabética, por data e por nota.
+
 Filtro Director: Podemos ver todos os filmes do Diretor escolhido.
+
 Filtro Producer: Podemos ver todos os filmes do Producer escolhido.
 
 Para saber mais detalhes sobre o filme, basta apenas selecionar a capa ou nome de qual desejar.
@@ -97,8 +104,11 @@ Para saber mais detalhes sobre o filme, basta apenas selecionar a capa ou nome d
 Ao acessar pagina Characters temos várias formas de filtrar e pesquisar.
 
 Barra de pesquisa: Podemos pesquisar por nome do personagem.
+
 Filtro de A-Z: Podemos ordenar os filmes por ordem alfabética.
+
 Filtro de Species: Podemos pesquisar por Espécies existentes no universo do Studio Ghibli.
+
 Filtro Movies: Podemos pesquisar por Filme e encontrar todos os personagens.
 
 Para saber mais detalhes sobre o Personagem, basta apenas selecionar a foto de qual desejar.
@@ -109,25 +119,28 @@ Para saber mais detalhes sobre o Personagem, basta apenas selecionar a foto de q
 
 ## Tecnologias &#128640;
 
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-- [GitHub Pages](https://pages.github.com/)
-- [Node.js](https://nodejs.org/)
-- [Jest](https://jestjs.io/)
-- [Figma](https://www.figma.com)
+| Tec's      |
+| ---------- |
+| Figma      |
+| Git        |
+| JavaScript |
+| CSS        |
+| HTML       |
+| Node.Js    |
+  Jest-Testes
 
 
 
 ---
 ## Resultado Final &#9989;
 ##### Home
-<img width=600px alt="Resultado Final Home" src="https://cdn.discordapp.com/attachments/858579792914546708/954448271517032548/ezgif-4-4fbbaef44e_1.gif">
+<img width=600px alt="Resultado Final Home" src="https://media1.giphy.com/media/9hIJMuAPvi7w33xdan/giphy.gif?cid=790b761151e3beea00e02d0e0e10aa72af2fa6e1fb79b286&rid=giphy.gif&ct=g">
 
 ##### Movies
-<img width=600px alt="Resultado Final Movies" src="https://cdn.discordapp.com/attachments/858579792914546708/954449425202303026/ezgif-4-71d4793303.gif">
+<img width=600px alt="Resultado Final Movies" src="https://media4.giphy.com/media/hGKUfFCV0gXdDTym2r/giphy.gif?cid=790b76113a9aa3a6c2d9eba1ea42449b42e45fb1b0a38483&rid=giphy.gif&ct=g">
 
 ##### Characters
-<img width=600px alt="Resultado Final Characters" src="https://cdn.discordapp.com/attachments/858579792914546708/954451424949977119/ezgif-4-73bfd51191.gif">
+<img width=600px alt="Resultado Final Characters" src="https://media1.giphy.com/media/3oCgX0Gqs8JEyefOyn/giphy.gif?cid=790b7611c807d5d73ae7eb6dfe6950a1022b4b7f9110cf08&rid=giphy.gif&ct=g">
 
 ---
 
