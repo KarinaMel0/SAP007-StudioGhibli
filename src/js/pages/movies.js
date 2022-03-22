@@ -1,5 +1,5 @@
 import dataGhibli from "../../data/ghibli/ghibli.js";
-import { sortArray } from "../data.js";
+import { MoviesPageFunctions } from "../data.js";
 
 const cardsContainer = document.createElement("section");
 const modalContainer = document.querySelector(".modalContainer");
@@ -57,11 +57,11 @@ document.querySelector("#search").addEventListener("keyup", (e) => {
    document.querySelector("#calculoFilms").style.display = "none"}else{
     document.querySelector("#calculoFilms").style.display = "initial"
    }
-  renderScreen(sortArray.search(e.target.value));
+  renderScreen(MoviesPageFunctions.search(e.target.value,dataGhibli));
 });
 
 document.getElementById("directors").addEventListener("change", (e) => {
-  const calculoFilms = sortArray.toComparerProducerAndDirector(e.target.value,'director')
+  const calculoFilms = MoviesPageFunctions.toComparerProducerAndDirector(e.target.value,'director',dataGhibli)
   renderScreen(calculoFilms);
   document.querySelector("#calculoFilms").remove()
   if(calculoFilms.length == 20){
@@ -73,7 +73,7 @@ document.getElementById("directors").addEventListener("change", (e) => {
 
 document.getElementById("Producer").addEventListener("change", (e) => {
 
-  const calculoFilms = sortArray.toComparerProducerAndDirector(e.target.value,'producer')
+  const calculoFilms = MoviesPageFunctions.toComparerProducerAndDirector(e.target.value,'producer',dataGhibli)
   renderScreen(calculoFilms);
   document.querySelector("#calculoFilms").remove()
   if(calculoFilms.length == 20){
@@ -84,7 +84,7 @@ document.getElementById("Producer").addEventListener("change", (e) => {
 });
 
 document.getElementById("inputSelect").addEventListener("change", (e) => {
-  renderScreen(sortArray.filterArray(e.target.value));
+  renderScreen(MoviesPageFunctions.filterArray(e.target.value,dataGhibli));
 });
 
 
@@ -95,14 +95,11 @@ document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id=
 
 
 
-
-sortArray.search("Castle");
-
-sortArray.filterCreatorProducerAndDirector('producer').forEach(function(newFilter){
+MoviesPageFunctions.filterCreatorProducerAndDirector('producer',dataGhibli).forEach(function(newFilter){
   document.querySelector("#Producer").insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
 })
 
-sortArray.filterCreatorProducerAndDirector('director').forEach(function(newFilter){
+MoviesPageFunctions.filterCreatorProducerAndDirector('director',dataGhibli).forEach(function(newFilter){
   document.querySelector("#directors").insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
 })
 

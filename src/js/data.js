@@ -2,12 +2,14 @@ import dataGhibli from "../data/ghibli/ghibli.js";
 
 
 
-export const sortArray = {
 
-  filterArray(inputValue) {
+
+export const MoviesPageFunctions = {
+
+  filterArray(inputValue,data) {
     let selectValueDropDown = inputValue;
 
-    dataGhibli.films.sort((a, b) => {
+    data.films.sort((a, b) => {
       let titleA = a.title.toLowerCase(),
         titleB = b.title.toLowerCase(),
         ratingA = parseInt(a.rt_score),
@@ -16,67 +18,104 @@ export const sortArray = {
         DataB = parseInt(b.release_date);
 
       if (selectValueDropDown == "A-Z") {
-        return sortArray.order(titleA, titleB);
+        return globalFunctions.order(titleA, titleB);
       }
       if (selectValueDropDown == "Z-A") {
-        return sortArray.orderInverse(titleA, titleB);
+        return globalFunctions.orderInverse(titleA, titleB);
       }
       if (selectValueDropDown == "highestScore") {
-        return sortArray.orderInverse(ratingA, ratingB);
+        return globalFunctions.orderInverse(ratingA, ratingB);
       }
       if (selectValueDropDown == "lowestScore") {
-        return sortArray.order(ratingA, ratingB);
+        return globalFunctions.order(ratingA, ratingB);
       }
       if (selectValueDropDown == "Newest") {
-        return sortArray.orderInverse(DataA, DataB);
+        return globalFunctions.orderInverse(DataA, DataB);
       }
       if (selectValueDropDown == "Oldest") {
-        return sortArray.order(DataA, DataB);
+        return globalFunctions.order(DataA, DataB);
       }
     });
 
-    return dataGhibli;
-  },
-  order(a, b) {
-    if (a < b) {
-      return -1;
-    }
-    if (a > b) {
-      return 1;
-    }
-    return 0;
-  },
-  orderInverse(a, b) {
-    if (a < b) {
-      return 1;
-    }
-    if (a > b) {
-      return -1;
-    }
-    return 0;
+    return data;
   },
 
-  search(Data) {
-    const Filtro = dataGhibli.films.filter((value) => {
-      return value.title.toLowerCase().indexOf(Data.toLowerCase()) > -1;
+  search(valueInput,data) {
+    const Filtro = data.films.filter((value) => {
+      return value.title.toLowerCase().indexOf(valueInput.toLowerCase()) > -1;
     });
 
     return Filtro;
   },
 
-  searchCharacters(Data){
-    const personagens = dataGhibli.films.map((item)=>{ return item.people.map((NameCharacters) => {
+ filterCreatorProducerAndDirector(typeInfo,data){
+  let filterArray = []
+  const arraymap = data.films.map((items) => { return items[typeInfo] } )
+
+  arraymap.forEach(function (genderValueof){
+    filterArray = filterArray.concat(genderValueof)
+  })
+
+
+  // eslint-disable-next-line no-undef
+  const filter = [...new Set(filterArray)]
+
+
+  return filter
+},
+
+ toComparerProducerAndDirector(value,typeInfo,data){
+  let filterArray = []
+  let inputValue = value;
+  const dadosArray = data.films.map((items) => { return items} )
+
+  dadosArray.forEach(function (Value){
+    filterArray = filterArray.concat(Value)
+  })
+
+  if(inputValue == "" ){
+    return filterArray
+  }
+
+  const newArray = filterArray.filter((itemAtual)=>{
+    return itemAtual[typeInfo].toLowerCase() == inputValue.toLowerCase()
+  })
+
+  return newArray
+},
+
+}
+
+export const charactersPageFunctions = {
+
+  filterSpeciesDropDown(data){
+    let filterArray = []
+    const charactersType = data.films.map((items) => { return items.people.map((itemAtual) => { return itemAtual.specie})} )
+
+    charactersType.forEach(function (specie){
+      filterArray = filterArray.concat(specie)
+    })
+
+
+    // eslint-disable-next-line no-undef
+    const filter = [...new Set(filterArray)]
+
+    return filter
+  },
+
+  searchCharacters(valueInput,data){
+    const characters = data.films.map((item)=>{ return item.people.map((NameCharacters) => {
       return NameCharacters
     })})
 
-    const Filtro = personagens.flat().filter((nam) =>{
-      return nam.name.toLowerCase().indexOf(Data.toLowerCase()) > -1
-    })// a forma como o name e chamado com chaves faz com que eu consiga pegar apenas ele
+    const Filter = characters.flat().filter((character) =>{
+      return character.name.toLowerCase().indexOf(valueInput.toLowerCase()) > -1
+    })
 
-    return Filtro
+    return Filter
   },
 
- filterSpecies(valorinput){
+  filterSpecies(valorinput){
     let filterArray = []
     let inputValue = valorinput;
     const dadosArray = dataGhibli.films.map((items) => { return items.people.map((itemAtual) => { return itemAtual})} )
@@ -96,135 +135,109 @@ export const sortArray = {
     return newArray
   },
 
- filterCharactersAZ(Valorinput,Data){
+  filterCharactersAZ(valorinput,characters,data){
 
-  let filterArray = []
-  let inputValue = Valorinput
-  const dadosArray = dataGhibli.films.map((items) => { return items.people.map((itemAtual) => { return itemAtual})} )
+    let filterArray = []
+    let inputValue = valorinput
+    const dataArray = data.films.map((items) => { return items.people.map((itemAtual) => { return itemAtual})} )
 
-    dadosArray.forEach(function (genderValueof){
+      dataArray.forEach(function (character){
+        filterArray = filterArray.concat(character)
+      })
+
+      const newArray = characters.sort((a, b) => {
+        let titleA = a.name.toLowerCase(),
+          titleB = b.name.toLowerCase();
+
+
+          switch(inputValue){
+
+            case 'A-Z':
+            return globalFunctions.order(titleA, titleB);
+
+            case 'Z-A':
+            return globalFunctions.orderInverse(titleA, titleB);
+
+            }
+      });
+
+     return newArray
+
+  },
+
+  filterFilmsDropDown(data){
+    let filterArray = []
+    const films = data.films.map((items) => { return items.title} )
+
+    films.forEach(function (genderValueof){
       filterArray = filterArray.concat(genderValueof)
     })
 
-    const newArray = Data.sort((a, b) => {
-      let titleA = a.name.toLowerCase(),
-        titleB = b.name.toLowerCase();
+
+    // eslint-disable-next-line no-undef
+    const filter = [...new Set(filterArray)]
 
 
-        switch(inputValue){
+    return filter
+   },
 
-          case 'A-Z':
-          return sortArray.order(titleA, titleB);
+   compareMovies(value,data){
+    let filterArray = []
+    let inputValue = value;
+    const dadosArray = data.films.map((items) => { return items} )
 
-          case 'Z-A':
-          return sortArray.orderInverse(titleA, titleB);
+    let ArrayPadrao = []
+    dadosArray.forEach(function (movies){
+      filterArray = filterArray.concat(movies)
+      ArrayPadrao = ArrayPadrao.concat(movies.people)
+    })
 
-          }
-    });
-   return newArray
+    if(inputValue == "" ){
 
-},
+      return ArrayPadrao
+    }
 
- filterSpeciesDropDown(){
-  let filterArray = []
-  const charactersType = dataGhibli.films.map((items) => { return items.people.map((itemAtual) => { return itemAtual.specie})} )
-
-  charactersType.forEach(function (genderValueof){
-    filterArray = filterArray.concat(genderValueof)
-  })
-
-
-  // eslint-disable-next-line no-undef
-  const filter = [...new Set(filterArray)]
-
-  return filter
-},
-
- filterCreatorProducerAndDirector(TypeInfo){
-  let filterArray = []
-  const data = dataGhibli.films.map((items) => { return items[TypeInfo] } )
-
-  data.forEach(function (genderValueof){
-    filterArray = filterArray.concat(genderValueof)
-  })
-
-
-  // eslint-disable-next-line no-undef
-  const filter = [...new Set(filterArray)]
-
-
-  return filter
-},
-
- toComparerProducerAndDirector(value,TypeInfo){
-  let filterArray = []
-  let inputValue = value;
-  const dadosArray = dataGhibli.films.map((items) => { return items} )
-
-  dadosArray.forEach(function (genderValueof){
-    filterArray = filterArray.concat(genderValueof)
-  })
-
-  if(inputValue == "" ){
-    return filterArray
-  }
-
-  const newArray = filterArray.filter((itemAtual)=>{
-    return itemAtual[TypeInfo].toLowerCase() == inputValue.toLowerCase()
-  })
-
-  return newArray
-},
-
- filterFilmsDropDown(){
-  let filterArray = []
-  const films = dataGhibli.films.map((items) => { return items.title} )
-
-  films.forEach(function (genderValueof){
-    filterArray = filterArray.concat(genderValueof)
-  })
-
-
-  // eslint-disable-next-line no-undef
-  const filter = [...new Set(filterArray)]
-
-
-  return filter
- },
-
- compareMovies(value){
-  let filterArray = []
-  let inputValue = value;
-  const dadosArray = dataGhibli.films.map((items) => { return items} )
-
-  let ArrayPadrao = []
-  dadosArray.forEach(function (genderValueof){
-    filterArray = filterArray.concat(genderValueof)
-    ArrayPadrao = ArrayPadrao.concat(genderValueof.people)
-  })
-  if(inputValue == "" ){
-
-    return ArrayPadrao
-  }
-
-  const newArray = filterArray.filter((itemAtual)=>{
-    return itemAtual.title.toLowerCase() == inputValue.toLowerCase()
-  })
+    const newArray = filterArray.filter((movies)=>{
+      return movies.title.toLowerCase() == inputValue.toLowerCase()
+    })
 
 
 
-  return newArray[0].people
+    return newArray[0].people
 
-},
+  },
 
- calc(calculoFilms){
+}
 
+
+export const globalFunctions = {
+
+  calc(calculoFilms){
   let calculo =  100 * calculoFilms / 171
 
-  return calculo
+    return calculo
+  },
+
+  order(a, b) {
+    if (a < b) {
+      return -1;
+    }
+    if (a > b) {
+      return 1;
+    }
+    return 0;
+  },
+
+  orderInverse(a, b) {
+    if (a < b) {
+      return 1;
+    }
+    if (a > b) {
+      return -1;
+    }
+    return 0;
+  },
+
+
 }
-}
-
-
-
 
