@@ -21,7 +21,7 @@
 
 ## Definição do Produto :pencil2:
 
-O <a href="https://karinamel0.github.io/SAP007-data-lovers/">Ghibli Wiki</a> Foi elaborado com a finalidade de facilitar o dia a dia dos fãs e orienta-los com informações das suas obras preferidas do Studio Ghibli.
+O <a href="https://karinamel0.github.io/SAP007-data-lovers/">Studio Ghibli</a> Foi elaborado com a finalidade de facilitar o dia a dia dos fãs e orienta-los com informações das suas obras preferidas do Studio Ghibli.
 
 O Design do site foi pensando para trazer uma verdadeira imersão para o usuário, com a página Home sendo o portal de entrada, contendo um pouco do Studio e um Slide Show com alguns dos filmes mais famosos do Studio aqui no Brasil.
 
@@ -82,37 +82,15 @@ Em Suma, Desejo que o projeto consiga ajudar muitos admiradores do Studio Ghibli
 
 ## Como Utilizar? :gear:
 
-Na pagina inicial temos algumas informacoes sobre o studio.
+Você precisará usar o Node.js
 
-Com o Click(Mobile ou Tablet) ou apenas passando o mouse por cima do menu lateral voce pode ter acesso ao restante do site e minhas redes de contanto.
+Clonar o projeto `$ git clone https://github.com/KarinaMel0/SAP007-StudioGhibli.git`
 
-##### Pagina Movies
+Instalar as dependências do projeto `$ npm install or yarn`
 
-Ao acessar pagina Movies temos várias formas de filtrar e pesquisar.
+Iniciar a aplicação `$ npm start or yarn start`
 
-Barra de pesquisa: Podemos pesquisar por nome do Filme.
-
-Filtro A-Z: Podemos ordenar os filmes por ordem alfabética, por data e por nota.
-
-Filtro Director: Podemos ver todos os filmes do Diretor escolhido.
-
-Filtro Producer: Podemos ver todos os filmes do Producer escolhido.
-
-Para saber mais detalhes sobre o filme, basta apenas selecionar a capa ou nome de qual desejar.
-
-##### Pagina Characters
-Ao acessar pagina Characters temos várias formas de filtrar e pesquisar.
-
-Barra de pesquisa: Podemos pesquisar por nome do personagem.
-
-Filtro de A-Z: Podemos ordenar os filmes por ordem alfabética.
-
-Filtro de Species: Podemos pesquisar por Espécies existentes no universo do Studio Ghibli.
-
-Filtro Movies: Podemos pesquisar por Filme e encontrar todos os personagens.
-
-Para saber mais detalhes sobre o Personagem, basta apenas selecionar a foto de qual desejar.
-
+Realizar os testes unitários `$ npm test or yarn test`
 
 
 ---
