@@ -1,9 +1,9 @@
 import dataGhibli from "../../data/ghibli/ghibli.js"
-import {sortArray} from "../../js/data.js"
+import {charactersPageFunctions, globalFunctions} from "../../js/data.js"
 
 const modalContainer = document.querySelector(".modalContainer");
 const cardsContainer = document.createElement("section");
-let personagens = sortArray.filterSpecies("")
+let personagens = charactersPageFunctions.filterSpecies("")
 // Array global de personagens, esta sendo utilizado no InputFilmes e no InputAZ, serve para conseguir ordernar de A-Z e Z-A para
 
 
@@ -47,21 +47,21 @@ let personagens = sortArray.filterSpecies("")
 
 
 document.getElementById("inputAZ").addEventListener("change", (e) => {
-    renderScreen(sortArray.filterCharactersAZ(e.target.value,personagens));
+    renderScreen(charactersPageFunctions.filterCharactersAZ(e.target.value,personagens,dataGhibli));
 
 });
 
 document.querySelector("#search").addEventListener("keyup", (e) => {
   document.querySelector("#calculoCharaters").remove()   // remove o calculo da tela, sem isso fica se repetindo sem parar.
 
-  renderScreen(sortArray.searchCharacters(e.target.value));
-  personagens = sortArray.searchCharacters(e.target.value)
+  renderScreen(charactersPageFunctions.searchCharacters(e.target.value,dataGhibli));
 
-  document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(sortArray.searchCharacters(e.target.value).length).toFixed(2)}% of characters  </p>`)
+  document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${globalFunctions.calc(charactersPageFunctions.searchCharacters(e.target.value,dataGhibli).length).toFixed(2)}% of characters  </p>`)
+
 });
 
 document.getElementById("inputFilmes").addEventListener("change", (e) => {
-  const calculoFilms = sortArray.compareMovies(e.target.value)
+  const calculoFilms = charactersPageFunctions.compareMovies(e.target.value,dataGhibli)
   const calculo =  100 * calculoFilms.length / 171
   renderScreen(calculoFilms);
   document.querySelector("#calculoCharaters").remove()
@@ -72,19 +72,19 @@ document.getElementById("inputFilmes").addEventListener("change", (e) => {
   if(calculoFilms.length != 171){
     document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters"> ${e.target.value} has ${calculo.toFixed(2)}% characters </p>`)
   } else{
-    document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(personagens.length).toFixed(2)}% of characters  </p>`)
+    document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${globalFunctions.calc(personagens.length).toFixed(2)}% of characters  </p>`)
   }
 
 });
 
 document.getElementById("InputSpecies").addEventListener("change", (e) => {
 
-  const calculoFilms = sortArray.filterSpecies(e.target.value)
+  const calculoFilms = charactersPageFunctions.filterSpecies(e.target.value)
   renderScreen(calculoFilms);
   document.querySelector("#calculoCharaters").remove()
   personagens = calculoFilms
 
-  document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(calculoFilms.length).toFixed(2)}% of characters  </p>`)
+  document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${globalFunctions.calc(calculoFilms.length).toFixed(2)}% of characters  </p>`)
 });
 
 
@@ -123,17 +123,17 @@ function renderModal(infoFilme) {
 
 
 
- document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${sortArray.calc(personagens.length).toFixed(2)}% of characters  </p>`)
+ document.querySelector(".inputContainer").insertAdjacentHTML('afterend', `<p id="calculoCharaters">there are ${globalFunctions.calc(personagens.length).toFixed(2)}% of characters  </p>`)
 
 
 
 
-renderScreen(sortArray.searchCharacters(""))
+renderScreen(charactersPageFunctions.searchCharacters("",dataGhibli))
 
-sortArray.filterFilmsDropDown().forEach(function(newFilter){
+charactersPageFunctions.filterFilmsDropDown(dataGhibli).forEach(function(newFilter){
   document.querySelector('#inputFilmes').insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
 })
 
-sortArray.filterSpeciesDropDown().forEach(function(newFilter){
+charactersPageFunctions.filterSpeciesDropDown(dataGhibli).forEach(function(newFilter){
   document.querySelector('#InputSpecies').insertAdjacentHTML('beforeend', `<option value="${newFilter}" class= "dropdown">${newFilter}`)
 })
